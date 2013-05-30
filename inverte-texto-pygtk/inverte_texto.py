@@ -9,34 +9,34 @@ import sys
 UI_FILE = "inverte_texto.ui"
 
 class GUI:
-  def __init__(self):
-		self.builder = gtk.Builder()
-		self.builder.add_from_file(UI_FILE)
-		self.builder.connect_signals(self)
+    def __init__(self):
+        self.builder = gtk.Builder()
+        self.builder.add_from_file(UI_FILE)
+        self.builder.connect_signals(self)
 
-		window = self.builder.get_object('window')
-		self.campo = self.builder.get_object('entry1')
+        window = self.builder.get_object('window')
+        self.campo = self.builder.get_object('entry1')
 
-		window.show_all()
+        window.show_all()
 
-	def botao_inverter(self, botao):
-		texto = self.campo.get_text()
-		self.inverte(texto)
-		
-	def inverte(self, texto):
-		final = texto[::-1]
-		self.campo.set_text(final)
-				
-	def sair(window, self):
-		gtk.main_quit()
-	
-	def destroy(window, self):
-		gtk.main_quit()
+    def botao_inverter(self, botao):
+        texto = self.campo.get_text()
+        self.inverte(texto)
+        
+    def inverte(self, texto):
+        final = texto[::-1]
+        self.campo.set_text(final)
+                
+    def sair(window, self):
+        gtk.main_quit()
+    
+    def destroy(window, self):
+        gtk.main_quit()
 
 
 def main():
-	app = GUI()
-	gtk.main()
-		
+    app = GUI()
+    gtk.main()
+        
 if __name__ == "__main__":
     sys.exit(main())
