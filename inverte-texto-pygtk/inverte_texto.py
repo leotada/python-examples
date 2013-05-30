@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# Inversor de texto com interface gráfica feita com GTK 2 usando Pygtk e a ferramenta Glade 3.8 para GTK+2.
+
 import pygtk
 pygtk.require('2.0')
 import gtk
