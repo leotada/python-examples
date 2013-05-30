@@ -10,7 +10,6 @@ UI_FILE = "inverte_texto.ui"
 
 class GUI:
   def __init__(self):
-
 		self.builder = gtk.Builder()
 		self.builder.add_from_file(UI_FILE)
 		self.builder.connect_signals(self)
@@ -33,6 +32,7 @@ class GUI:
 	
 	def destroy(window, self):
 		gtk.main_quit()
+
 
 def main():
 	app = GUI()
