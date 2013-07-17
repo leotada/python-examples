@@ -15,7 +15,7 @@ while patos > 0:
     print 'A mamãe gritou'
     patos -= 1
     quack()
-    if patos > 1:
+    if patos >= 1:
         print 'Mas só ' + str(patos) + (' patinhos voltaram de lá.\n' if patos != 1 else ' patinho voltou de lá.\n')
     else:
         print 'Mas nenhum patinho voltou de lá.\n'
