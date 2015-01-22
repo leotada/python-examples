@@ -49,7 +49,7 @@ class GUI(Frame):
 
 def main():
     root = Tk()
-    root.geometry()  # "1000x600+300+300"
+    root.geometry()
     GUI(root)
     root.mainloop()
 
