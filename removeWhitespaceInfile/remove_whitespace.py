@@ -3,14 +3,11 @@
 
 def removeWhitespaceInfile(file):
     var_file = open(file, "r")
-    tmp = var_file.read()
-    conc = tmp.split()
-    conte = ""
-    for x in range(0,len(conc)):
-        conte = conte+conc[x]
+    txt = var_file.read()
+    txt = txt.replace(' ', '').replace('\n', '')
     var_file.close()
     var_file = open(file, "w")
-    var_file.write(conte)
+    var_file.write(txt)
     var_file.close()
 
 file = input("Insert file's name: ")
